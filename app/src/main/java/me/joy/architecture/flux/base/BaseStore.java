@@ -6,28 +6,20 @@ package me.joy.architecture.flux.base;
  */
 public abstract class BaseStore {
 
-  protected  IDataChangedListener mListener;
 
-  public BaseStore() {
-    this(null);
-  }
-
-  public BaseStore(IDataChangedListener mListener) {
-    this.mListener = mListener;
-  }
+  protected OnDataFlowBackListener onDataFlowBackListener;
 
 
-  public void notifyDataChanged(String label) {
-    if (mListener != null) {
-      mListener.onDataChanged(label);
-    }
+  public void setOnDataFlowBackListener(
+      OnDataFlowBackListener onDataFlowBackListener) {
+    this.onDataFlowBackListener = onDataFlowBackListener;
   }
 
   public void release() {
-    this.mListener = null;
+    this.onDataFlowBackListener = null;
   }
 
 
-  public abstract void onReceiveAction(BaseAction action);
+  public abstract void onReceiveAction(BaseAction baseAction);
 
 }

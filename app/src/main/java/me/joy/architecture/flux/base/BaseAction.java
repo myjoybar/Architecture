@@ -3,15 +3,18 @@ package me.joy.architecture.flux.base;
 /**
  * Created by Joy on 2019/6/6
  */
-public class BaseAction<T> {
+public class BaseAction {
 
-  private final T data;
+  private String cmd;
 
-  public BaseAction(T data) {
-    this.data = data;
+  public BaseAction() {
   }
 
-  public T getData() {
-    return data;
+  public BaseAction(String cmd) {
+    this.cmd = cmd;
+  }
+
+  public String getCmd() {
+    return cmd;
   }
 }

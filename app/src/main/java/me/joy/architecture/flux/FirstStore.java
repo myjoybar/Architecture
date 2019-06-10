@@ -2,25 +2,22 @@ package me.joy.architecture.flux;
 
 import me.joy.architecture.flux.base.BaseAction;
 import me.joy.architecture.flux.base.BaseStore;
-import me.joy.architecture.flux.base.IDataChangedListener;
 
 /**
  * Created by Joy on 2019/6/6
  */
-public class FirstStore extends BaseStore {
+public class FirstStore extends BaseStore{
 
-  public FirstStore() {
-  }
 
-  public FirstStore(IDataChangedListener mListener) {
-    super(mListener);
-  }
 
   @Override
-  public void onReceiveAction(BaseAction action) {
-    if(mListener!=null){
-      mListener.onDataChanged(action);
-    }
+  public void onReceiveAction(BaseAction baseAction) {
 
+    String data = "I am the flow back data according to the first action";
+    FirstActionFlowBackData firstActionFlowBackData = new FirstActionFlowBackData(data);
+    if(onDataFlowBackListener != null){
+      onDataFlowBackListener.onDataFlowBack(firstActionFlowBackData);
+    }
   }
+
 }

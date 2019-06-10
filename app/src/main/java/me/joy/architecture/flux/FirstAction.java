@@ -5,9 +5,12 @@ import me.joy.architecture.flux.base.BaseAction;
 /**
  * Created by Joy on 2019/6/6
  */
-public class FirstAction extends BaseAction<String> {
+public class FirstAction extends BaseAction{
 
-  public FirstAction(String data) {
-    super(data);
+  public FirstAction() {
+  }
+
+  public FirstAction(String cmd) {
+    super(cmd);
   }
 }
