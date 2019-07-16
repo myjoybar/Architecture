@@ -17,9 +17,10 @@
       </intent-filter>
     </activity>
 
-    <activity android:name=".flux.FlutterActivity">
+    <activity android:name=".flux.FlutterActivity"/>
+    <activity android:name=".redux.ReduxActivity"/>
+    <activity android:name=".interceptor.InterceptorActivity"/>
 
-    </activity>
   </application>
 
 </manifest>

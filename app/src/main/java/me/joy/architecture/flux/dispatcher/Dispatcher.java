@@ -11,7 +11,9 @@ import me.joy.architecture.flux.base.BaseStore;
 public class Dispatcher {
 
   private final List<BaseStore> stores = new ArrayList<>();
+
   private static final class DispatcherHolder {
+
     public static final Dispatcher INSTANCE = new Dispatcher();
   }
 
@@ -29,7 +31,6 @@ public class Dispatcher {
   public void unregister(final BaseStore store) {
     stores.remove(store);
   }
-
 
 
   public void dispatch(BaseAction action) {

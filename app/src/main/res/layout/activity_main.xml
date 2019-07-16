@@ -9,10 +9,25 @@
   tools:context=".MainActivity">
 
   <Button
-    android:id="@+id/btn_flutter"
+    android:id="@+id/btn_flux"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:text="Flutter"
+    android:text="Flux"
+    android:textAllCaps="false"/>
+
+
+  <Button
+    android:id="@+id/btn_redux"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Redux"
+    android:textAllCaps="false"/>
+
+  <Button
+    android:id="@+id/btn_interceptor"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="interceptor"
     android:textAllCaps="false"/>
 
 </LinearLayout>

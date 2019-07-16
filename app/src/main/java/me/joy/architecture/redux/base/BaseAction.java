@@ -1,4 +1,4 @@
-package me.joy.architecture.flux.base;
+package me.joy.architecture.redux.base;
 
 import java.util.HashMap;
 import java.util.Map;

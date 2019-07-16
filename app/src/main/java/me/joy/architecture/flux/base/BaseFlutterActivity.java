@@ -9,7 +9,7 @@ import me.joy.architecture.flux.dispatcher.Dispatcher;
  * Created by Joy on 2019/6/10
  */
 public abstract class BaseFlutterActivity<Store extends BaseStore> extends
-    AppCompatActivity implements OnDataFlowBackListener {
+    AppCompatActivity {
 
   protected Store store;
 
@@ -47,8 +47,5 @@ public abstract class BaseFlutterActivity<Store extends BaseStore> extends
 
   protected abstract void initStore();
 
-  @Override
-  public void onDataFlowBack(Object flowBackData) {
 
-  }
 }

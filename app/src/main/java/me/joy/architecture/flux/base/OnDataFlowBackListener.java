@@ -1,7 +1,17 @@
 package me.joy.architecture.flux.base;
 
 
-public interface OnDataFlowBackListener<Data> {
+public abstract class OnDataFlowBackListener<Data> {
 
-  void onDataFlowBack(Data flowBackData);
+  String type;
+
+  public OnDataFlowBackListener(String type) {
+    this.type = type;
+  }
+
+  public abstract void onDataFlowBackSuccess(Data flowBackData);
+
+  public void onDataFlowBackError(Object errorObj) {
+
+  }
 }
